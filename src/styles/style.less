@@ -1,0 +1,142 @@
+@import "variables.less";
+
+/* reset básico */
+* {
+    margin: @margin-body;
+    padding: @padding-body;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/* conteiner */
+.container  {
+    width: @container-width;
+    margin-left: @container-margin;
+    margin-right: @container-margin;
+    padding: @container-padding;
+
+        @media (min-width: @container-max-width) {
+            max-width: @container-max-width;
+            padding: @container-media-padding;
+        }
+}
+
+/* linha */
+.row {
+    margin-left: @row-margin;
+    margin-right: @row-margin;
+
+    &:before,
+    &:after {
+        content: "";
+        display: @row-before-content;
+    }
+    &:after {
+        clear: @row-clear;
+    }
+}
+
+/* colunas */
+.col {
+    display: inline-block;
+    vertical-align: top;
+    min-height: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+    margin-right: -4px;
+    
+}
+
+/* duas colonas */
+@media (min-width: @col-2-min-width) {
+    .col-2 {
+        width: @container-width /2;
+    }
+}
+
+/* tres colunas */
+@media (min-width: @col-3-min-width) {
+    .col-3 {
+        width: @container-width /3;
+    }
+}
+
+/* quatro colunas */
+@media (min-width: @col-3-min-width) {
+    .col-4 {
+        width: @container-width /4;
+    }
+}
+
+.nav-header-wrapper {
+    margin-top:@nav-header-wrapper;
+}
+
+.search-bar {
+    display: @search-bar-display;
+    justify-content: @search-bar-content;
+    align-items: @search-align;
+    height: @search-height;
+}
+
+.search-bar input {
+    width: @search-input-width;
+    padding: @search-input-padding;
+    border: @search-input-border;
+    border-radius: @search-input-border-radius;
+    background: @search-input-bg;
+}
+
+.perfil {
+    height: @search-height;
+    display: @search-bar-display;
+    align-items: @search-align;
+}
+
+.perfil img {
+    width: @perfil-width;
+    height: @perfil-height;
+    border-radius:@search-input-border-radius + 25px;
+    border: @perfil-border;
+    margin-right: @vert-line-margin + 15;
+}
+
+.vert-line {
+    border-left: @vert-line-border;
+    height: @vert-line-height;
+    margin-left: @vert-line-margin;
+    margin-right: @vert-line-margin + 10;
+}
+
+.perfil-text p{
+    color: @perfil-text-color;
+}
+
+.perfil-text h3 {
+    color: @perfil-h-color;
+}
+
+
+.arrow-down {
+    width: @arrow-width; 
+    height: @arrow-height; 
+    border-left: @arrow-border-side;
+    border-right: @arrow-border-side;    
+    border-top: @arrow-border-top;
+    position: @arrow-position;
+    left: @arrow-left;
+    top: @arrow-top;
+}
+
+
+
+/* USAR APENAS PARA DEMOSTRAÇÂO */
+.teste {
+    background: red;
+    padding: 5px;
+    text-align: center;
+    margin: 2px 0;
+    color: #fff;
+}
