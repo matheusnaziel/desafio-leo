@@ -4727,39 +4727,6 @@ readers do not read off random characters that represent icons */
   overflow: visible;
   position: static;
   width: auto; }
-@font-face {
-  font-family: 'Font Awesome 5 Brands';
-  font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url("../webfonts/fa-brands-400.eot");
-  src: url("../webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.woff") format("woff"), url("../webfonts/fa-brands-400.ttf") format("truetype"), url("../webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
-
-.fab {
-  font-family: 'Font Awesome 5 Brands'; }
-@font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  font-weight: 400;
-  font-display: auto;
-  src: url("../webfonts/fa-regular-400.eot");
-  src: url("../webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.woff") format("woff"), url("../webfonts/fa-regular-400.ttf") format("truetype"), url("../webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
-
-.far {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 400; }
-@font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  font-weight: 900;
-  font-display: auto;
-  src: url("../webfonts/fa-solid-900.eot");
-  src: url("../webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.woff") format("woff"), url("../webfonts/fa-solid-900.ttf") format("truetype"), url("../webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
-
-.fa,
-.fas {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900; }
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -4831,6 +4798,17 @@ body {
     width: 20%;
   }
 }
+@media (max-width: 728px) {
+  .search-bar {
+    display: block !important;
+  }
+  .box-margin {
+    margin: 20px 0px !important;
+  }
+  .slide-text {
+    position: initial !important;
+  }
+}
 .nav-header-wrapper {
   margin-top: 20px;
   margin-bottom: 10px;
@@ -4894,10 +4872,10 @@ body {
   background-image: url("../images/slide1.jpg");
 }
 .slide2 {
-  background-image: url("../images/slide2.jpg");
+  background-image: url("../images/slide-2.png");
 }
 .slide3 {
-  background-image: url("../images/slide1.jpg");
+  background-image: url("../images/slide3.jpg");
 }
 .slide-content {
   display: flex;
@@ -4906,9 +4884,30 @@ body {
   align-items: center;
   text-align: center;
 }
-.slide-content span {
-  font-size: 5rem;
+.slide-text {
+  width: 290px;
+  height: 160px;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px;
+  background: rgba(20, 20, 20, 0.8);
+  position: absolute;
+  left: 120px;
+}
+.slide-text p {
+  margin-top: 10px;
+  font-size: 10px;
+  text-align: initial;
+}
+.slide-btn {
+  margin-top: 10px;
+  background: transparent;
+  color: #fff;
+  font-size: 10px;
+  padding: 7px;
+  border-radius: 25px;
 }
 .arrow {
   cursor: pointer;
@@ -4919,17 +4918,25 @@ body {
   height: 0;
   border-style: solid;
 }
-#arrow-left {
-  border-width: 30px 40px 30px 0;
-  border-color: transparent #fff transparent transparent;
-  left: 0;
-  margin-left: 30px;
+a {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  border: solid #fff;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 15px;
 }
-#arrow-right {
-  border-width: 30px 0 30px 40px;
-  border-color: transparent transparent transparent #fff;
-  right: 0;
-  margin-right: 30px;
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  left: 15px;
+}
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  right: 15px;
 }
 .cursos {
   background: #f4f4f4;
@@ -4977,6 +4984,20 @@ body {
   border-radius: 25px;
   background: green;
   color: #fff;
+}
+.box-dotted {
+  height: 290px;
+  border: 3px dashed #bbbbbb;
+  background: transparent;
+}
+.footer {
+  padding: 15px;
+}
+.copyright {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  background: #bbbbbb;
 }
 /* USAR APENAS PARA DEMOSTRAÇÂO */
 .teste {
