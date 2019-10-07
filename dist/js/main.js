@@ -1,32 +1,3 @@
-// var slides = document.querySelectorAll('#slides .slide');
-// var currentSlide = 0;
-// var slideInterval = setInterval(nextSlide,4000);
-// var rightArrow = document.querySelector('.previous-wrapper');
-// var leftArrow = document.querySelector('.next-wrapper');
-// var sliderImages = document.querySelector('#slides')
-// var current = 0;
-// rightArrow.addEventListener('click', clicar);
-// leftArrow.addEventListener('click', clicar);
-
-// function clicar(){
-//     console.log('clicou!')
-// }
-
-// function reset() {
-//     for (var i = 0; i < sliderImages.length; i++) {
-//       sliderImages[i].style.display = "none";
-//     }
-//   }
-
-
-// function nextSlide(){
-// 	slides[currentSlide].className = 'slide';
-// 	currentSlide = (currentSlide+1)%slides.length;
-// 	slides[currentSlide].className = 'slide showing';
-// }
-
-
-
 var sliderImages = document.querySelectorAll(".slide");
 var arrowLeft = document.querySelector("#arrow-left");
 var arrowRight = document.querySelector("#arrow-right");

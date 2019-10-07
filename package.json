@@ -1,0 +1,23 @@
+{
+  "name": "desafio-leo-learning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "matheusnaziel"
+  },
+  "author": "Matheus Naziel",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-connect": "^5.7.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.1.1",
+    "gulp-less": "^4.0.1",
+    "gulp-minify": "^3.1.0"
+  }
+}
