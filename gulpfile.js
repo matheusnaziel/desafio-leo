@@ -15,6 +15,12 @@ gulp.task('connect', function() {
 	});
 });
 
+gulp.task('copyfonts', function() {
+    return gulp.src('./src/styles/vendor/fonts/*.{ttf,woff,eof,svg,eot}')
+      .pipe(gulp.dest('./dist/styles/fonts'))
+});
+
+
 gulp.task('html', function() {
 	  return gulp.src('./src/index.html')
 		.pipe(htmlmin({ collapseWhitespace: true }))
@@ -49,4 +55,4 @@ gulp.task('watch', function() {
 	gulp.watch([ './src/scripts/**/*.js' ], gulp.series('scripts'));
 });
 
-gulp.task('default', gulp.parallel('html', 'styles', 'scripts', 'image', 'connect', 'watch'));
+gulp.task('default', gulp.parallel('html', 'styles', 'copyfonts', 'scripts', 'image', 'connect', 'watch'));

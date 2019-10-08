@@ -339,11 +339,11 @@
   }
 @font-face {
   font-family: 'icomoon';
-  src:  url('./vendor/icons/fonts/icomoon.eot?q5d8de');
-  src:  url('./vendor/icons/fonts/icomoon.eot?q5d8de#iefix') format('embedded-opentype'),
-    url('./vendor/icons/fonts/icomoon.ttf?q5d8de') format('truetype'),
-    url('./vendor/icons/fonts/icomoon.woff?q5d8de') format('woff'),
-    url('./vendor/icons/fonts/icomoon.svg?q5d8de#icomoon') format('svg');
+  src:  url('./fonts/icomoon.eot?q5d8de');
+  src:  url('./fonts/icomoon.eot?q5d8de#iefix') format('embedded-opentype'),
+    url('./fonts/icomoon.ttf?q5d8de') format('truetype'),
+    url('./fonts/icomoon.woff?q5d8de') format('woff'),
+    url('./fonts/icomoon.svg?q5d8de#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
