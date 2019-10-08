@@ -116,6 +116,11 @@ body {
     position: @slide-text-pos;
     right: @search-input-padding + 5;
     color: @perfil-text-color;
+
+    @media (max-width: @col-3-min-width) {
+        position: @arrow-position;
+        right: @arrow-left + 5;
+    }
 }
 
 .perfil {
@@ -129,7 +134,7 @@ body {
     }
 }
 
-.perfil span {
+.perfil .vert-line{
     @media (max-width: @col-3-min-width) {
         display: none;
     }
@@ -163,12 +168,24 @@ body {
     color: @perfil-h-color;
 }
 
+.arrow-down {
+    border: @arrow-down-border;
+    border-width: @arrow-down-width;
+    display: @col-display;
+    padding: @arrow-down-padding;
+    margin: @arrow-down-margin;
+}
+
+#down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
 #slider,
 .wrap,
 .slide-content {
   margin: @margin-body;
   padding: @padding-body;
-  font-family: Arial, Helvetica, sans-serif;
   width: @container-width;
   height: @slide-height;
   overflow-x: @slide-overflow;
@@ -217,6 +234,14 @@ body {
   @media (max-width: @col-3-min-width) {
     position: @slide-text-pos-mob;
     }
+}
+
+.slide-text h3 {
+    text-align: @slide-text;
+}
+
+.slide-text button {
+    display: @search-bar-display;
 }
 
 .slide-text p {
@@ -327,17 +352,21 @@ a {
     display: @search-bar-display;
     align-items: @search-align;
     justify-content: @search-align;
-    height: @perfil-height + 240;
+    height: @perfil-height + 30;
     color: @perfil-text-color;
     font-size: @arrow-left * 2;
 }
 
+.add-course h4 {
+    color: @perfil-text-color;
+}
+
 .font-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 286px;
-    justify-content: center;
+    display: @search-bar-display;
+    flex-direction: @slide-content;
+    align-items: @search-align;
+    height: @font-icon-height;
+    justify-content: @search-align;
 }
 
 .footer {
@@ -359,7 +388,8 @@ a {
 }
 
 .contato-footer h3 {
-    margin-bottom: 15px;
+    margin-bottom: @a-left-2;
+    color: @perfil-text-color;
 }
 
 .copyright {
@@ -369,13 +399,7 @@ a {
     background: @search-input-bg;
 }
 
-
-/* USAR APENAS PARA DEMOSTRAÇÂO */
-.teste {
-    background: green;
-    padding: 5px;
-    text-align: center;
-    margin: 2px 0;
-    color: #fff;
+.copyright p {
+    color: @perfil-text-color;
 }
 

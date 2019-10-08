@@ -484,6 +484,12 @@ body {
   right: 15px;
   color: #818181;
 }
+@media (max-width: 728px) {
+  .search-bar span {
+    position: relative;
+    right: 35px;
+  }
+}
 .perfil {
   height: 62px;
   display: flex;
@@ -496,7 +502,7 @@ body {
   }
 }
 @media (max-width: 728px) {
-  .perfil span {
+  .perfil .vert-line {
     display: none;
   }
 }
@@ -524,12 +530,22 @@ body {
 .perfil-text h3 {
   color: #4c4c4c;
 }
+.arrow-down {
+  border: solid #818181;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin: 1px 1px 5px 15px;
+}
+#down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
 #slider,
 .wrap,
 .slide-content {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
   width: 100%;
   height: 50vh;
   overflow-x: hidden;
@@ -574,6 +590,12 @@ body {
   .slide-text {
     position: initial;
   }
+}
+.slide-text h3 {
+  text-align: left;
+}
+.slide-text button {
+  display: flex;
 }
 .slide-text p {
   margin-top: 10px;
@@ -669,9 +691,12 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 290px;
+  height: 80px;
   color: #818181;
   font-size: 60px;
+}
+.add-course h4 {
+  color: #818181;
 }
 .font-icon {
   display: flex;
@@ -695,6 +720,7 @@ a {
 }
 .contato-footer h3 {
   margin-bottom: 15px;
+  color: #818181;
 }
 .copyright {
   display: flex;
@@ -702,11 +728,6 @@ a {
   height: 40px;
   background: #dbdbdb;
 }
-/* USAR APENAS PARA DEMOSTRAÇÂO */
-.teste {
-  background: green;
-  padding: 5px;
-  text-align: center;
-  margin: 2px 0;
-  color: #fff;
+.copyright p {
+  color: #818181;
 }
