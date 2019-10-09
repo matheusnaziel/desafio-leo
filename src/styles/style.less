@@ -129,14 +129,14 @@ body {
     align-items: @search-align;
     
     @media (max-width: @col-3-min-width) {
-        display: flex;
-        justify-content: center;
+        display: @search-bar-display;
+        justify-content: @search-align;
     }
 }
 
 .perfil .vert-line{
     @media (max-width: @col-3-min-width) {
-        display: none;
+        display: @slide-btn;
     }
 }
 
@@ -340,6 +340,10 @@ a {
     border-radius: @search-input-border-radius;
     background: @btn-bg;
     color: @slide-color;
+
+    @media (min-width: @col-3-min-width) {
+        width: @perfil-width * 2;
+    }
 }
 
 .box-dotted {
@@ -370,7 +374,7 @@ a {
 }
 
 .footer {
-    padding: @a-left-2;
+    padding: @footer-padding;
 }
 
 .footer p {
@@ -403,3 +407,67 @@ a {
     color: @perfil-text-color;
 }
 
+
+.modal {
+    display: @slide-btn; 
+    position: @modal-position; 
+    z-index: @col-zoom; 
+    left: @arrow-width;
+    top: @arrow-width;
+    width: @container-width; 
+    height: @container-width; 
+    overflow: @container-margin; 
+    background-color: @slide-bg-trans; 
+    background-color: @slide-bg-trans; 
+  }
+  
+  
+.modal-content {
+    background-color: @cursos-bg;
+    margin: @modal-margin; 
+    border: @a-border;
+    border-radius: @search-input-border-radius;
+    width: @top-arrow; 
+
+    @media (max-width: @col-3-min-width) {
+        width: @top-arrow + 40;
+        }
+  }
+  
+.modal-img img {
+      width: @container-width;
+  }
+  
+.modal-img h2 {
+    margin-top: @arrow-left;
+    text-align: @search-align;
+}
+
+.modal-img p {
+    padding: @a-left-2;
+    text-align: @search-align;
+}
+
+.modal-img .modal-btn {
+    margin: @btn-margin;
+    background: @modal-background;
+    padding: @modal-padding;
+    border-radius: @search-input-border-radius;
+    display: @search-bar-display;
+    margin-bottom: @perfil-width - 10;
+    color:@slide-color;
+}
+
+.close {
+    color: @perfil-text-color;
+    float: @modal-float;
+    font-size: @modal-font;
+    font-weight: @modal-weight;
+  }
+  
+.close:hover,
+.close:focus {
+    color: @modal-close;
+    text-decoration: @slide-btn;
+    cursor: @arrow-cursor;
+  }
